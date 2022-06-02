@@ -1,0 +1,149 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+.board
+{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.ball
+{
+    position: absolute;
+    background: url("2.jpg");
+    background-size: 200px;
+    border-radius: 0;
+    width: 200px;
+    height: 200px;
+    top:2.5px;
+    left: 2.5px;
+    animation: bounce ease-in-out infinite;
+    animation-duration: 4s;
+}
+
+@keyframes bounce {
+    0%
+    {
+        width:200px;
+        height: 200px;
+        border-radius: 0;
+
+    }
+    25%
+    {
+        width: 200px;
+        height: 200px;
+        border-radius:25%;
+        position: relative;
+        background: url("1.jpg");
+        background-size: 200px;
+    }
+    50%
+    {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+
+    }
+    75%
+    {
+        width: 200px;
+        height: 200px;
+        border-radius: 25%;
+        position: relative;
+        background: url("2.jpg");
+        background-size: 200px;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        border-radius: 0;
+
+    }
+}
+
+
+
+.container{
+    position: relative;
+    background-color: #ff16ef;
+    border-radius: 0;
+    width: 205px;
+    height: 205px;
+    top: -50px;
+    left: 120px;
+    animation: normalbounce ease-in-out infinite;
+    animation-duration: 4s;
+}
+@keyframes normalbounce {
+    0%
+    {
+        width: 205px;
+        height: 205px;
+        border-radius: 0;
+    }
+    25%
+    {
+        width: 205px;
+        height: 205px;
+        border-radius:25%;
+        transform: rotateY(180deg);
+    }
+    50%
+    {
+        width: 205px;
+        height: 205px;
+        transform: translateY(400px);
+        border-radius: 50%;
+
+    }
+    75%
+    {
+        width: 205px;
+        height: 205px;
+        border-radius: 25%;
+        transform: rotateY(180deg);
+    }
+    100%
+    {
+        transform: translateY(0px);
+        border-radius: 0;
+    }
+}
+.shadow
+{
+    background-color: #ff16ef;
+    height: 30px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    top: 350px;
+    left: 125px;
+    z-index: -1;
+    animation: shrink 0.9s infinite;
+    animation-duration: 4s;
+}
+@keyframes shrink {
+    33%
+    {
+        transform: rotateY(180deg);
+    }
+    50%
+    {
+        transform: scaleX(0.5);
+    }
+    83%
+    {
+        transform: rotateY(180deg);
+    }
+}
